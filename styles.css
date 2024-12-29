@@ -10,6 +10,46 @@ html {
   scroll-behavior: smooth;
 }
 
+li {
+  list-style-type: none;
+}
+
+/* NAVIGATION */
+
+#EAV-logo {
+  width: 80px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  height: 100px;
+}
+
+.nav__link {
+  margin: 0 12px;
+}
+
+.nav__link--list {
+  display: flex;
+}
+
+.nav__link--anchor {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
+}
+
+.fa-circle-half-stroke {
+  font-size: 24px;
+}
+
+
 /* SMALL DESKTOPS, LAPTOPS */
 @media (max-width: 1280px) {
 }
