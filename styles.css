@@ -1,4 +1,4 @@
-/* Adding style before all the elements */
+/* GENERICS */
 * {
   font-family: "Roboto", sans-serif;
   padding: 0;
@@ -10,8 +10,44 @@ html {
   scroll-behavior: smooth;
 }
 
+h1 {
+  font-size: 80px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 24px;
+}
+
 li {
   list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+section {
+  background-color: rgb(245, 245, 245);
+}
+
+.click {
+  transition: all 300ms ease;
+}
+
+.click:hover {
+  transform: scale(1.1);
+}
+
+.click:active {
+  transform: scale(0.8);
+}
+
+.text--green {
+  color: #006400;
 }
 
 /* NAVIGATION */
@@ -27,6 +63,7 @@ nav {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
+  padding: 0 20px;
   height: 100px;
 }
 
@@ -39,7 +76,6 @@ nav {
 }
 
 .nav__link--anchor {
-  text-decoration: none;
   font-size: 20px;
   color: black;
   font-weight: 700;
@@ -47,6 +83,100 @@ nav {
 
 .fa-circle-half-stroke {
   font-size: 24px;
+}
+
+/* LANDING PAGE */
+
+#landing-page {
+  min-height: 100vh;
+}
+
+header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1000px;
+}
+
+.header__title {
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1;
+}
+
+.header__para {
+  max-width: 500px;
+  line-height: 2;
+}
+
+.social__list {
+  margin-top: 16px;
+  display: flex;
+}
+
+.social__link {
+  font-size: 24px;
+  width: 48px;
+  height: 48px;
+  background-color: #006400;
+  color: white;
+  border-radius: 50%;
+  padding: 0 8px;
+  margin-right: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mail__btn {
+  width: 72px;
+  height: 72px;
+  font-size: 32px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  position: absolute;
+  bottom: 32px;
+  right: 40px;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll__icon {
+  width: 20px;
+  height: 32px;
+  border: 2px solid black;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll__icon::after {
+  position: relative;
+  top: 4px;
+  content: "";
+  width: 4px;
+  height: 8px;
+  background-color: black;
+  border-radius: 2px;
+  animation: scroll 650ms infinite alternate-reverse;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
 }
 
 
