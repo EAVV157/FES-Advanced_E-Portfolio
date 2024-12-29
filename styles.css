@@ -77,8 +77,21 @@ section {
 
 /* NAVIGATION */
 
-#EAV-logo {
+.logo__wrapper {
   width: 80px;
+}
+
+.logo {
+  width: 100%;
+  filter: brightness(20%);
+  mask: 
+    linear-gradient(135deg, #111c 40%, #060606 50%, #111c 60%)
+    100% 100%/250% 250%;
+transition: 800ms ease;
+}
+
+.logo:hover {
+  mask-position: 0 0;
 }
 
 nav {
