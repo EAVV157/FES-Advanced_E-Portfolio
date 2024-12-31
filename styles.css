@@ -49,6 +49,7 @@ section {
 }
 
 .container {
+  width: 100%;
   padding: 50px 0;
 }
 
@@ -57,6 +58,10 @@ section {
   max-width: 1072px;
   margin: 0 auto;
   padding: 0 48px;
+}
+
+.text--green {
+  color: #006400;
 }
 
 .click {
@@ -71,8 +76,31 @@ section {
   transform: scale(0.8);
 }
 
-.text--green {
-  color: #006400;
+.link__hover-effect {
+  position: relative;
+}
+
+.link__hover-effect:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: -3px;
+  right: 0;
+  transition: all 300ms ease;
+}
+
+.link__hover-effect:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+.link__hover-effect--green:after {
+  background-color: #006400;
+}
+
+.link__hover-effect--white:after {
+  background-color: white;
 }
 
 /* NAVIGATION */
@@ -117,6 +145,11 @@ nav {
   font-size: 20px;
   color: black;
   font-weight: 700;
+  transition: color 300ms ease;
+}
+
+.nav__link:not(:last-child) .nav__link--anchor:hover{
+  color: #006400;
 }
 
 .fa-circle-half-stroke {
@@ -177,7 +210,7 @@ header {
   background-color: black;
   color: white;
   border-radius: 50%;
-  border: none;
+  border: 2px solid rgb(250, 250, 250);
   position: fixed;
   bottom: 40px;
   right: 40px;
@@ -279,6 +312,39 @@ header {
   margin-right: 16px;
 }
 
+/* FOOTER */
+
+footer {
+  background-color: black;
+}
+
+footer .row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo--img-wrapper {
+  width: 120px;
+}
+
+.footer__logo--img {
+  width: 100%;
+  filter: invert(1);
+}
+
+.footer__social--list {
+  width: 100%;
+  max-width: 500px;
+  margin: 32px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__social--link,
+.footer__copyright {
+  color: white;
+}
 
 /* SMALL DESKTOPS, LAPTOPS */
 @media (max-width: 1280px) {
