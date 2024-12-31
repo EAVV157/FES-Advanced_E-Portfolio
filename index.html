@@ -108,7 +108,7 @@
           </div>
         </div>
       </header>
-      <button class="mail__btn click" onclick="toggleModel()">
+      <button formtarget="_top" class="mail__btn click" onclick="toggleModel()">
         <i class="fa-solid fa-envelope"></i>
       </button>
       <a href="#projects" class="scroll">
@@ -175,7 +175,7 @@
                 placeholder="Your Name"
                 name="user_name"
                 type="text"
-                
+                required
               />
             </div>
             <div class="form__item">
@@ -184,7 +184,7 @@
                 placeholder="your@email.com"
                 name="user__email"
                 type="email"
-                
+                required
               />
             </div>
             <div class="form__item">
@@ -193,7 +193,7 @@
                 placeholder="Let me know what your message is here!"
                 name="user_message"
                 type="text"
-                
+                required
               ></textarea>
             </div>
             <button id="contact__submit" class="form__submit">

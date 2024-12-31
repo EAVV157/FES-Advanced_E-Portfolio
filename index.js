@@ -30,4 +30,5 @@ function toggleModel() {
         return document.body.classList.remove("model--open")
     }
     document.body.classList += " model--open"
+    document.documentElement.scrollTop = 0;
 }

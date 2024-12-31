@@ -314,6 +314,10 @@ header {
 
 /* MODEL/CONTACT WINDOW */
 
+.model--open {
+  overflow:hidden;
+}
+
 .model--open .model{
   z-index: 10;
   box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.55);
