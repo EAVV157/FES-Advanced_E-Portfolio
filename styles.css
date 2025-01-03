@@ -39,6 +39,10 @@ button {
   cursor: pointer;
 }
 
+canvas {
+  position: fixed;
+}
+
 input,
 textarea {
   width: 100%;
@@ -79,9 +83,11 @@ label {
 
 section {
   background-color: rgb(250, 250, 250);
+  transition: background-color 300ms ease;
 }
 
 .section__title {
+  position: relative;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -161,6 +167,38 @@ header {
   transition: opacity 300ms 50ms, visibilty 300ms 50ms;
 }
 
+.dark-theme .header__title, 
+.dark-theme .header__para, 
+.dark-theme .section__title, 
+.dark-theme .section__sub-title, 
+.dark-theme .nav__link--anchor, 
+.dark-theme .fa-adjust
+{
+  color: white;
+}
+
+.dark-theme section {
+  background-color: black;
+}
+
+.dark-theme .logo {
+  filter: invert(1);
+}
+
+.dark-theme .scroll__icon {
+  border-color: white;
+}
+
+.dark-theme .scroll__icon::after {
+  background-color: white;
+}
+
+.dark-theme .mail__btn {
+  color: black;
+  border-color: black;
+  background-color: white;
+}
+
 /* NAVIGATION */
 
 .logo__wrapper {
@@ -199,6 +237,7 @@ nav {
 }
 
 .nav__link--anchor {
+  position: relative;
   font-size: 20px;
   color: black;
   font-weight: 700;
@@ -563,6 +602,7 @@ header {
 /* FOOTER */
 
 footer {
+  position: relative;
   background-color: black;
 }
 

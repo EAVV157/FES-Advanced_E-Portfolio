@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edgar Vargas</title>
     <link rel="stylesheet" href="./styles.css" />
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,22 +33,22 @@
     </script>
   </head>
   <body>
+    <canvas></canvas>
     <section id="landing-page">
       <nav>
         <figure class="logo__wrapper shine">
           <img src="./assets/EAV-logo-nobg.ico" class="logo" alt="" />
         </figure>
         <ul class="nav__link--list">
-          <li class="nav__link">
+          <li class="nav__link" onclick="toggleModel()">
             <a
-              href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--green"
               >About</a
             >
           </li>
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--green"
               >Projects</a
             >
@@ -60,8 +60,8 @@
               >Contact</a
             >
           </li>
-          <li class="nav__link click">
-            <a href="#" class="nav__link--anchor"
+          <li class="nav__link click" onclick="toggleContrast()">
+            <a class="nav__link--anchor nav__link--contrast"
               ><i class="fa-solid fa-circle-half-stroke"></i>
             </a>
           </li>
@@ -321,7 +321,8 @@
             <a
               href="#"
               class="footer__social--link link__hover-effect link__hover-effect--white"
-            >
+              onclick="toggleModel()"
+              >
               Contact
             </a>
             <a
