@@ -61,6 +61,7 @@ textarea {
 textarea {
   resize: vertical;
   height: 100px;
+  min-height: 100px;
   max-height: 260px;
   margin-top: 8px;
 }
@@ -94,12 +95,12 @@ section {
 
 .container {
   width: 100%;
-  padding: 50px 0;
+  padding: 52px 0;
 }
 
 .row {
   width: 100%;
-  max-width: 1072px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 48px;
 }
@@ -113,7 +114,7 @@ section {
 }
 
 .click {
-  transition: all 300ms ease;
+  transition: transform 300ms ease;
 }
 
 .click:hover {
@@ -175,13 +176,12 @@ header {
   box-shadow: 0 16px 96px rgba(255, 255, 255, 0.55);
 }
 
-.dark-theme .header__title, 
-.dark-theme .header__para, 
-.dark-theme .section__title, 
-.dark-theme .section__sub-title, 
-.dark-theme .nav__link--anchor, 
-.dark-theme .fa-adjust
-{
+.dark-theme .header__title,
+.dark-theme .header__para,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-adjust {
   color: white;
 }
 
@@ -207,7 +207,7 @@ header {
   background-color: white;
 }
 
-.wave {
+/* .wave {
   display: inline-block;
   transition: animate-peace 200ms linear;
 }
@@ -219,14 +219,14 @@ header {
 @keyframes animate-peace {
   0% {
     transform: rotate(0);
-}
-50% {
+  }
+  50% {
     transform: rotate(-30deg);
-}
-100% {
+  }
+  100% {
     transform: rotate(0);
-}
-}
+  }
+} */
 
 /* NAVIGATION */
 
@@ -293,7 +293,7 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  max-width: 1024px;
+  max-width: 1000px;
 }
 
 .header__title {
@@ -383,10 +383,10 @@ header {
 /* MODEL/CONTACT WINDOW */
 
 .model--open {
-  overflow:hidden;
+  overflow: hidden;
 }
 
-.model--open .model{
+.model--open .model {
   z-index: 10;
   box-shadow: 0 8px 96px 0 rgba(0, 0, 0, 0.55);
   visibility: visible;
@@ -665,18 +665,465 @@ footer .row {
 
 /* SMALL DESKTOPS, LAPTOPS */
 @media (max-width: 1280px) {
+  /* Good size, no need to add media query */
 }
 /* SMALL LAPTOPS, LANDSCAPE TABLETS */
 @media (max-width: 1024px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  header {
+    max-width: 700px;
+  }
+
+  .container {
+    padding: 40px 0;
+  }
+
+  .row {
+    max-width: 740px;
+  }
+
+  .header__title {
+    font-size: 56px;
+  }
+
+  .header__para {
+    font-size: 20px;
+  }
+
+  .social__link {
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .project__description {
+    max-width: 400px;
+  }
+
+  .project__description--title {
+    font-size: 24px;
+  }
+
+  .project__description--sub-title {
+    font-size: 16px;
+  }
+
+  .project__description--para {
+    font-size: 12px;
+    margin: 16px 0;
+  }
+
+  .project__description--link {
+    font-size: 20px;
+  }
 }
 /* TABLETS, LANDSCAPE PHONES */
 @media (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+  }
+
+  label,
+  input,
+  textarea,
+  .form__submit {
+    font-size: 12px;
+  }
+
+  textarea {
+    max-height: 190px;
+  }
+
+  header {
+    max-width: 590px;
+  }
+  
+  .container {
+    padding: 32px 0;
+  }
+
+  .row {
+    max-width: 600px;
+  }
+
+  .model--open .model__about,
+  .model--open .model__contact {
+    transform: translateY(0%);
+  }
+
+  .model {
+    top: 0;
+    left: 0;
+    margin: 10%;
+    width: 80%;
+    height: 82%;
+    transform: none;
+    flex-direction: column;
+  }
+
+  .model__half {
+    width: 100%;
+    height: 100%;
+    padding: 28px 56px;
+  }
+
+  .model__about {
+    height: 70%;
+    transform: translateY(-110%);
+  }
+
+  .model__contact {
+    transform: translateY(110%);
+  }
+
+  .model__title {
+    font-size: 24px;
+  }
+  .model__sub-title {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .model__para {
+    font-size: 12px;
+  }
+
+  .model__languages {
+    padding: 0 12px;
+  }
+
+  .model__language--wrapper {
+    width: 15%;
+  }
+
+  .form__item,
+  .header__para {
+    margin-bottom: 16px;
+  }
+
+  .form__submit {
+    max-width: 120px;
+    padding: 8px 16px;
+  }
+
+  .model__exit {
+    color: black;
+  }
+
+  .header__title {
+    font-size: 48px;
+  }
+
+  .header__para {
+    max-width: 350px;
+  }
+
+  .social__link {
+    font-size: 16px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .project__description {
+    left: 60px;
+    max-width: 300px;
+  }
+
+  .project__description--title {
+    font-size: 20px;
+  }
+
+  .project__description--sub-title {
+    font-size: 12px;
+  }
+
+  .project__description--para {
+    font-size: 10px;
+    margin: 12px 0;
+  }
+
+  .project__description--link {
+    font-size: 16px;
+  }
+
+
+  .footer__logo--img-wrapper {
+    width: 80px;
+  }
+
+  .footer__social--list a,
+  .footer__copyright {
+    font-size: 12px;
+  }
+
+  .footer__social--list {
+    margin: 28px 0;
+  }
 }
 /* PHONES, LANDSCAPE SMALL PHONES */
 @media (max-width: 640px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  header {
+    max-width: 400px;
+  }
+  
+  .container {
+    padding: 24px 0;
+  }
+
+  .row {
+    max-width: 560px;
+  }
+
+  .model__half {
+    padding: 20px 32px;
+  }
+
+  .model__about {
+    height: 60%;
+  }
+
+  .model__title {
+    font-size: 20px;
+  }
+  .model__sub-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  .model__para {
+    font-size: 12px;
+  }
+
+  .model__languages {
+    padding: 0 8px;
+  }
+
+  .model__language--wrapper {
+    width: 15%;
+
+  }
+
+  .model__language--name {
+    font-size: 12px;
+  }
+
+  .form__item {
+    margin-bottom: 8px;
+  }
+
+  .form__submit {
+    max-width: 100px;
+    padding: 4px 12px;
+  }
+
+  .model__exit {
+    top: 24px;
+    right: 32px;
+    font-size: 24px;
+  }
+
+  .logo__wrapper {
+    width: 60px;
+  }
+
+  .nav__link--anchor {
+    font-size: 16px;
+  }
+
+  .fa-circle-half-stroke {
+    font-size: 20px;
+  }
+
+  .header__title {
+    font-size: 32px;
+  }
+
+  .header__para {
+    font-size: 16px;
+    max-width: 268px;
+  }
+
+  .social__link {
+    font-size: 16px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .mail__btn {
+    width: 52px;
+    height: 52px;
+    font-size: 20px;
+  }
+
+  .project__description {
+    left: 40px;
+    max-width: 350px;
+  }
+
+  .project__description--title {
+    font-size: 20px;
+  }
+
+  .project__description--sub-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .project__description--para {
+    font-size: 12px;
+    margin: 16px 0;
+  }
+
+  .project__description--link {
+    font-size: 16px;
+  }
+
+
+  .footer__logo--img-wrapper {
+    width: 60px;
+  }
+
+  .footer__social--list {
+    margin: 20px 0;
+  }
 }
 /* SMALL PHONES, LANDSCAPE TINY PHONES */
 @media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  header {
+    max-width: 324px;
+  }
+  
+  .container {
+    padding: 16px 0;
+  }
+
+  .row {
+    max-width: 440px;
+  }
+
+  .model__half {
+    padding: 24px 36px;
+  }
+
+  .model__about {
+    height: 50%;
+  }
+
+  .model__title {
+    font-size: 16px;
+  }
+  .model__sub-title {
+    font-size: 12px;
+    margin: 12px 0;
+  }
+
+  .model__para {
+    font-size: 10px;
+  }
+
+  .model__languages {
+    padding: 0 8px;
+  }
+
+  .model__language--wrapper {
+    width: 12%;
+    padding: 8px 0;
+  }
+
+  .model__language--name {
+    font-size: 10px;
+  }
+
+  .form__item {
+    margin-bottom: 8px;
+  }
+
+  .form__submit {
+    max-width: 100px;
+    padding: 4px 12px;
+  }
+
+  .model__exit {
+    top: 20px;
+    right: 28px;
+    font-size: 24px;
+  }
+
+  .logo__wrapper {
+    width: 60px;
+  }
+
+  .nav__link--anchor {
+    font-size: 16px;
+  }
+
+  .fa-circle-half-stroke {
+    font-size: 20px;
+  }
+
+  .header__title {
+    font-size: 24px;
+  }
+
+  .header__para {
+    font-size: 12px;
+    max-width: 200px;
+  }
+
+  .social__link {
+    font-size: 12px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .mail__btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .project__description {
+    left: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .project__description--para {
+    display: none;
+  }
+
+  .project__description--sub-title {
+    margin: 12px 0;
+  }
+
+  .footer__logo--img-wrapper {
+    width: 48px;
+  }
+
+  .footer__social--list a,
+  .footer__copyright {
+    font-size: 8px;
+  }
+
+  .footer__social--list {
+    margin: 12px 0;
+  }
+
+  footer .row {
+    max-width: 380px;
+  }
 }
 /* TINY PHONES */
 @media (max-width: 320px) {

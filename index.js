@@ -1,4 +1,7 @@
+/* *************** VARIABLES *************** */
 let contrastToggle = false;
+const cElem = document.querySelector(".model__exit");
+let pElem = document.querySelector(".model__contact");
 
 /* *************** MATRIX BACKGROUND *************** */
 // Initialising the canvas
@@ -82,3 +85,24 @@ function toggleModel() {
     document.querySelector("body").classList.toggle("model--open");
     document.documentElement.scrollTop = 0;
 }
+
+/* ****** CHANGING MODEL EXIT POSITION ****** */
+function modelExitPosition (width) {
+  pElem.removeChild(cElem)
+  if(width.matches) {
+    pElem = document.querySelector(".model__about");
+  }
+  else {
+    pElem = document.querySelector(".model__contact");
+  }
+  pElem.prepend(cElem);
+}
+
+var mediaWidth = window.matchMedia("(max-width: 768px)");
+console.log(mediaWidth)
+
+modelExitPosition(mediaWidth);
+
+mediaWidth.addEventListener("change", function() {
+  modelExitPosition(mediaWidth);
+})
