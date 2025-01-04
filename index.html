@@ -42,7 +42,7 @@
         <ul class="nav__link--list">
           <li class="nav__link" onclick="toggleModel()">
             <a
-              class="nav__link--anchor link__hover-effect link__hover-effect--green"
+              class="nav__link--anchor link__hover-effect link__hover-effect--green pointer"
               >About</a
             >
           </li>
@@ -60,7 +60,7 @@
               >Contact</a
             >
           </li>
-          <li class="nav__link click" onclick="toggleContrast()">
+          <li class="nav__link click pointer" onclick="toggleContrast()">
             <a class="nav__link--anchor nav__link--contrast"
               ><i class="fa-solid fa-circle-half-stroke"></i>
             </a>
@@ -165,7 +165,7 @@
           </div>
         </div>
         <div class="model__half model__contact">
-          <i class="fa-solid fa-xmark model__exit click" onclick="toggleModel()"></i>
+          <i class="fa-solid fa-xmark model__exit click pointer" onclick="toggleModel()"></i>
           <h3 class="model__title">Send me a message!</h3>
           <h4 class="model__sub-title">I'm actively checking my mail.</h4>
           <form id="contact__form" onsubmit="contact(event)">

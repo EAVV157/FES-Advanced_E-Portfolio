@@ -1,4 +1,3 @@
-let isModelOpen = true;
 let contrastToggle = false;
 
 /* *************** MATRIX BACKGROUND *************** */
@@ -7,8 +6,8 @@ var canvas = document.querySelector('canvas'),
     ctx = canvas.getContext('2d');
 
 // Setting the width and height of the canvas
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = screen.height;
+canvas.width = screen.width;
 
 // Setting up the letters
 const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
@@ -34,7 +33,7 @@ function draw() {
   ctx.fillRect(0, 0, canvas.width, canvas.height);
   for (var i = 0; i < drops.length; i++) {
     var text = letters[Math.floor(Math.random() * letters.length)];
-    ctx.fillStyle = contrastToggle ? '#fff' : '#000';
+    ctx.fillStyle = contrastToggle ? '#fff8' : '#0008';
     ctx.fillText(text, i * fontSize, drops[i] * fontSize);
     drops[i]++;
     if (drops[i] * fontSize > canvas.height && Math.random() > .95) {
@@ -46,16 +45,13 @@ function draw() {
 // Loop the animation
 setInterval(draw, 33);
 
+/* *************** DARK THEME *************** */
 function toggleContrast() {
   contrastToggle = !contrastToggle;
-  if(contrastToggle) {
-    document.body.classList += " dark-theme";
-  }
-  else {
-    document.body.classList.remove("dark-theme");
-  }
+  document.querySelector("body").classList.toggle("dark-theme");
 }
 
+/* ************* SENDING EMAILS ************* */
 function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(".model__overlay--loading");
@@ -81,11 +77,8 @@ function contact(event) {
     });
 }
 
+/* ********** OPENING/CLOSING MODEL ********** */
 function toggleModel() {
-    isModelOpen = !isModelOpen;
-    if(isModelOpen){
-        return document.body.classList.remove("model--open")
-    }
-    document.body.classList += " model--open"
+    document.querySelector("body").classList.toggle("model--open");
     document.documentElement.scrollTop = 0;
 }
