@@ -9,8 +9,8 @@ var canvas = document.querySelector('canvas'),
     ctx = canvas.getContext('2d');
 
 // Setting the width and height of the canvas
-canvas.height = screen.height;
-canvas.width = screen.width;
+canvas.height = window.innerHeight;
+canvas.width = window.innerWidth;
 
 // Setting up the letters
 const katakana = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
