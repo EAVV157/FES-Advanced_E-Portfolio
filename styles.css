@@ -759,7 +759,7 @@ footer .row {
     left: 0;
     margin: 10%;
     width: 80%;
-    height: 88%;
+    height: 86%;
     transform: none;
     flex-direction: column;
   }
@@ -1012,7 +1012,7 @@ footer .row {
   }
 
   .model__half {
-    padding: 24px 36px;
+    padding: 16px 28px;
   }
 
   .model__about {
